@@ -1,6 +1,6 @@
-*****************************
-XN Twist Python Documentation
-*****************************
+*****************
+SDK Documentation
+*****************
 
 .. automodule:: xnTwist
   :members:
