@@ -22,6 +22,27 @@ class xnTwist(object):
         else:
             raise RuntimeWarning("Error response from {}".format(url))
 
+    def retrieve_dataset(self):
+        """Pull data from the ``/mappings`` branch and format it for use with
+        the xn-twist algorithm."""
+        dataset = {}
+
+        # make a request to the ``mappings`` branch
+        r = self.get_mappings()
+
+        # iterate through each of the mappings
+        for mapping in r['_items']:
+            # if the character is not in the dataset, create a new entry
+            if mapping['character'] not in dataset.keys():
+                dataset[mapping['character']] = list()
+
+            # add each potential spoof of the current character to the dataset
+            for potential_spoof in mapping['potential_spoofs']:
+                dataset[mapping['character']].append(
+                    potential_spoof['spoof_character'])
+
+        return dataset
+
     def get_base(self):
         """Make ``GET`` request to the base api branch (``/``)."""
         return self.make_get_request(self.api_path)
