@@ -7,8 +7,9 @@ branches:
 install: 
 - pip install requests
 - pip install pytest
+- pip install pytest-cov
 - pip install codecov
 script:
-- pytest
+- py.test --cov=./
 after_success:
 - codecov
