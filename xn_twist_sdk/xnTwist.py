@@ -21,7 +21,6 @@ class xnTwist(object):
             return json.loads(response.text)
         else:
             raise RuntimeWarning("Error response from {}".format(url))
-            return json.loads(response.text)
 
     def get_base(self):
         return self.make_request(self.api_path)
