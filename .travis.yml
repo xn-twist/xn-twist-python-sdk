@@ -7,6 +7,7 @@ branches:
 install: 
 - pip install requests
 - pip install pytest
+- pip install codecov
 script:
 - pytest
 after_success:
