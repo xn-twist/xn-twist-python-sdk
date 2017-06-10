@@ -4,11 +4,19 @@
 
 import json
 
+import pytest
+
 from xn_twist_sdk import xnTwist
 
 
-def test_sdk_calls():
+@pytest.fixture
+def xn():
     xn = xnTwist.xnTwist()
+    return xn
+
+
+def test_get_requests(xn):
+    """Test GET requests to XN-Twist's API."""
     base_response = xn.get_base()
     assert("administrators" in json.dumps(base_response) and
            "feed" in json.dumps(base_response))
