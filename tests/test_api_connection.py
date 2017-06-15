@@ -18,9 +18,15 @@ def xn():
 def test_get_requests(xn):
     """Test GET requests to XN-Twist's API."""
     base_response = xn.get_base()
-    # make a few assertions to ensure that the base_response was received
+    # make assertions to ensure that the base_response was received and all branches are listed
     assert("administrators" in json.dumps(base_response))
+    assert("mappings" in json.dumps(base_response))
+    assert("basic_characters" in json.dumps(base_response))
     assert("feed" in json.dumps(base_response))
+    assert("non_basic_characters" in json.dumps(base_response))
+    assert("suggested_deprecations" in json.dumps(base_response))
+    assert("unmapped_characters" in json.dumps(base_response))
+    assert("depricated_characters" in json.dumps(base_response))
 
     response = None
     try:
