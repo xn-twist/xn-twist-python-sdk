@@ -2,5 +2,5 @@
 SDK Documentation
 *****************
 
-.. automodule:: xnTwist
+.. automodule:: XnTwist
   :members:
