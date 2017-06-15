@@ -18,8 +18,9 @@ def xn():
 def test_get_requests(xn):
     """Test GET requests to XN-Twist's API."""
     base_response = xn.get_base()
-    assert("administrators" in json.dumps(base_response) and
-           "feed" in json.dumps(base_response))
+    # make a few assertions to ensure that the base_response was received
+    assert("administrators" in json.dumps(base_response))
+    assert("feed" in json.dumps(base_response))
 
     response = None
     try:
