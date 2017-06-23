@@ -6,7 +6,7 @@ import json
 
 import pytest
 
-import xntwist_python_sdk
+from xntwist_python_sdk import xntwist_python_sdk
 
 
 @pytest.fixture
