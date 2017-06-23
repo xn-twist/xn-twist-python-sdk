@@ -7,14 +7,14 @@ import json
 import requests
 
 
-class XnTwist(object):
+class XnTwistSDK(object):
     """Class for communicating with the XN-Twist API."""
 
     def __init__(self):
         self.api_path = "http://miceandmen.tk:5000/"
 
     @staticmethod
-    def _make_get_request(self, url):
+    def _make_get_request(url):
         """Make and handle a ``GET`` request to the given url."""
         response = requests.get(url)
 
