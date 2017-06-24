@@ -27,7 +27,7 @@ setup(
     long_description=readme + '\n\n' + history,
     author="Floyd Hightower",
     author_email='',
-    url='https://github.com/fhightower/xntwist_python_sdk',
+    url='https://github.com/xn-twist/xntwist-python-sdk',
     packages=find_packages(exclude=('tests', 'docs')),
     package_dir={'xntwist_python_sdk':
                  'xntwist_python_sdk'},
