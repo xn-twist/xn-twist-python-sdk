@@ -13,11 +13,12 @@ with open('LICENSE') as license_file:
     license = license_file.read()
 
 requirements = [
-    # TODO: put package requirements here
+    'Requests'
 ]
 
 test_requirements = [
-    # TODO: put package test requirements here
+    'Requests'
+    'Pytest'
 ]
 
 setup(
