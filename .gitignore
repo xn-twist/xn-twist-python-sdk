@@ -97,3 +97,6 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# Cookie cutter packaging file
+travis_pypi_setup.py
