@@ -6,12 +6,12 @@ import json
 
 import pytest
 
-from xntwist_python_sdk import xntwist_python_sdk
+from xntwist_python_sdk import xntwist_python
 
 
 @pytest.fixture
 def xn():
-    xn = xntwist_python_sdk.XnTwistSDK()
+    xn = xntwist_python.XnTwistSDK()
     return xn
 
 

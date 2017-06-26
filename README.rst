@@ -77,10 +77,10 @@ Usage
 
 .. code-block:: python
 
-    from xntwist_python_sdk import xntwist_python_sdk
+    from xntwist_python_sdk import xntwist_python
 
     # instantiate the XN-Twist Python SDK
-    xn = xntwist_python_sdk.XnTwistSDK()
+    xn = xntwist_python.XnTwistSDK()
 
 Credits
 -------
