@@ -2,6 +2,10 @@
 XN-Twist Python SDK
 ===============================
 
+.. image:: https://api.codacy.com/project/badge/Grade/6927955d30df40f395aa8adbd7b8bfe4
+   :alt: Codacy Badge
+   :target: https://www.codacy.com/app/fhightower/xntwist-python-sdk?utm_source=github.com&utm_medium=referral&utm_content=xn-twist/xntwist-python-sdk&utm_campaign=badger
+
 .. image:: https://img.shields.io/pypi/v/xntwist-python-sdk.svg
         :target: https://pypi.python.org/pypi/xntwist-python-sdk
 
