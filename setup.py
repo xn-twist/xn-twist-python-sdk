@@ -35,7 +35,7 @@ setup(
     include_package_data=True,
     install_requires=requirements,
     license=license,
-    zip_safe=False,
+    zip_safe=True,
     keywords='xntwist_python_sdk',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
