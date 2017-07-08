@@ -11,7 +11,7 @@ class XnTwistSDK(object):
     """Class for communicating with the XN-Twist API."""
 
     def __init__(self):
-        self.api_path = "http://miceandmen.tk:5000/"
+        self.api_path = "http://xntwist.tk:5000/"
 
     @staticmethod
     def _make_get_request(url):
