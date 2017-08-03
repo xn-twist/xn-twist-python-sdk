@@ -8,6 +8,10 @@ XN-Twist Python SDK
 .. image:: https://img.shields.io/travis/xn-twist/xntwist-python-sdk.svg
         :target: https://travis-ci.org/xn-twist/xntwist-python-sdk
 
+.. image:: https://api.codacy.com/project/badge/Grade/6927955d30df40f395aa8adbd7b8bfe4
+        :alt: Codacy Badge
+        :target: https://www.codacy.com/app/fhightower/xntwist-python-sdk
+ 
 .. image:: https://codecov.io/gh/xn-twist/xntwist-python-sdk/branch/master/graph/badge.svg
         :target: https://codecov.io/gh/xn-twist/xntwist-python-sdk
 
