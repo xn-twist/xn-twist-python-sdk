@@ -144,7 +144,7 @@ class XnTwistSDK(object):
             'If-Match': item_etag
         }
 
-        return self.requester.make_delete_request(self.api_path + "mappings" +
+        return self.requester.make_put_request(self.api_path + "mappings" +
                                                   "/{}".format(item_id),
                                                   self.auth, header, data)
 
