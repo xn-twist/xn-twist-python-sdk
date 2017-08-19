@@ -23,10 +23,6 @@ XN-Twist Python SDK
      :target: https://pyup.io/repos/github/xn-twist/xntwist-python-sdk/
      :alt: Updates
 
-.. image:: https://www.quantifiedcode.com/api/v1/project/9197b16ca7bc4866b5407d976395e33b/badge.svg
-  :target: https://www.quantifiedcode.com/app/project/9197b16ca7bc4866b5407d976395e33b
-  :alt: Code issues
-
 Python SDK for talking with `XN-Twist's API <https://github.com/xn-twist/xn-twist-api>`_ . **Note:** this package is not designed to be your primary interaction with the XN-Twist API. This is simply a package to aid the management of the API and is used behind the scenes in the `xn-twist package <https://github.com/xn-twist/xn-twist>`_.
 
 Installation
