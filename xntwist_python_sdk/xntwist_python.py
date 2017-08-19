@@ -6,22 +6,60 @@ import json
 
 import requests
 
+from utility import Utility
+
 
 class XnTwistSDK(object):
     """Class for communicating with the XN-Twist API."""
 
     def __init__(self):
         self.api_path = "http://xntwist.tk:5000/"
+        # initialize a utility object
+        self.utility = Utility()
 
-    @staticmethod
-    def _make_get_request(url):
-        """Make and handle a ``GET`` request to the given url."""
-        response = requests.get(url)
+    # @staticmethod
+    # def _make_get_request(url):
+    #     """Make and handle a ``GET`` request to the given url."""
+    #     response = requests.get(url)
 
-        if response.ok:
-            return json.loads(response.text)
-        else:
-            raise RuntimeWarning("Error response from {}".format(url))
+    #     if response.ok:
+    #         return json.loads(response.text)
+    #     else:
+    #         raise RuntimeWarning("{} response from {}".format(response.status,
+    #                                                           url))
+
+    # @staticmethod
+    # def _make_post_request(url, auth=None, headers=None, data=None):
+    #     """Make and handle a ``POST`` request to the given url."""
+    #     response = requests.post(url, auth=auth, headers=headers, json=data)
+
+    #     if response.ok:
+    #         return json.loads(response.text)
+    #     else:
+    #         raise RuntimeWarning("{} response from {}".format(response.status,
+    #                                                           url))
+
+    # @staticmethod
+    # def _make_put_request(url, auth=None, headers=None, data=None):
+    #     """Make and handle a ``PUT`` request to the given url."""
+    #     response = requests.put(url, auth=auth, headers=headers, json=data)
+
+    #     if response.ok:
+    #         return json.loads(response.text)
+    #     else:
+    #         raise RuntimeWarning("{} response from {}".format(response.status,
+    #                                                           url))
+
+    # @staticmethod
+    # def _make_delete_request(url, auth=None, headers=None):
+    #     """Make and handle a ``DELETE`` request to the given url."""
+    #     response = requests.delete(url, auth=auth, headers=headers)
+
+    #     if response.ok:
+    #         return json.loads(response.text)
+    #     else:
+    #         raise RuntimeWarning("{} response from {}".format(response.status,
+    #                                                           url))
 
     def retrieve_dataset(self):
         """Pull data from the ``/mappings`` branch and format it for use with
@@ -46,33 +84,33 @@ class XnTwistSDK(object):
 
     def get_base(self):
         """Make ``GET`` request to the base api branch (``/``)."""
-        return self._make_get_request(self.api_path)
+        return self.utility.make_get_request(self.api_path)
 
     def get_administrators(self):
         """
         Make ``GET`` request to branch with admin users (``/administrators``).
         """
-        return self._make_get_request(self.api_path + "administrators")
+        return self.utility.make_get_request(self.api_path + "administrators")
 
     def get_feed(self):
         """
         Make ``GET`` request to branch with recently classified characters
         (``/feed``).
         """
-        return self._make_get_request(self.api_path + "feed")
+        return self.utility.make_get_request(self.api_path + "feed")
 
     def get_mappings(self):
         """
         Make ``GET`` request to branch with character mappings (``/mappings``).
         """
-        return self._make_get_request(self.api_path + "mappings")
+        return self.utility.make_get_request(self.api_path + "mappings")
 
     def get_non_basic_chars(self):
         """
         Make ``GET`` request to branch with the list of non-basic characters
         that may be used to spoof latin characters (``/non_basic_characters``).
         """
-        return self._make_get_request(self.api_path + "non_basic_characters")
+        return self.utility.make_get_request(self.api_path + "non_basic_characters")
 
     def get_unmapped_chars(self):
         """
@@ -80,25 +118,25 @@ class XnTwistSDK(object):
         have not been mapped to any basic characters
         (``/unmapped_characters``).
         """
-        return self._make_get_request(self.api_path + "unmapped_characters")
+        return self.utility.make_get_request(self.api_path + "unmapped_characters")
 
     def get_basic_chars(self):
         """
         Make ``GET`` request to branch with basic characters
         (``/basic_characters``).
         """
-        return self._make_get_request(self.api_path + "basic_characters")
+        return self.utility.make_get_request(self.api_path + "basic_characters")
 
     def get_suggested_deprecations(self):
         """
         Make ``GET`` request to branch with non-basic characters that have
         been suggested for deprecation (``/suggested_deprecations``).
         """
-        return self._make_get_request(self.api_path + "suggested_deprecations")
+        return self.utility.make_get_request(self.api_path + "suggested_deprecations")
 
     def get_depricated_chars(self):
         """
         Make ``GET`` request to branch with the non-basic characters that have
         been deprecated (``/depricated_characters``).
         """
-        return self._make_get_request(self.api_path + "depricated_characters")
+        return self.utility.make_get_request(self.api_path + "depricated_characters")
