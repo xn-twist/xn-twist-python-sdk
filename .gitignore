@@ -100,3 +100,6 @@ ENV/
 
 # Cookie cutter packaging file
 travis_pypi_setup.py
+
+# config file
+*.conf

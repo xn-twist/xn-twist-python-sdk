@@ -1,0 +1,9 @@
+# DO NOT PUT REAL CREDENTIALS IN THIS FILE AND I MEAN IT! This is an example.
+
+[xn-twist]
+username = John Doe
+password = Test
+
+# If you want to use your real credentials, create a copy of this file and
+# name it `tc.conf`. The .gitignore will make sure that file doesn't get
+# (or should I say 'git') committed.

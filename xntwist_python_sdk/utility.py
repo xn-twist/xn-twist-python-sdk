@@ -7,10 +7,11 @@ import json
 import requests
 
 
-class Utility(object):
+class Requester(object):
     """Utility class for the XN-Twist API."""
 
     def __init__(self):
+        """."""
         return
 
     @staticmethod
@@ -22,18 +23,18 @@ class Utility(object):
             return json.loads(response.text)
         else:
             raise RuntimeWarning("{} response ".format(response.status_code) +
-                                 "from {}".format(url))
+                                 "from {}: {}".format(url, response.text))
 
     @staticmethod
-    def make_post_request(url, auth=None, headers=None, data=None):
+    def make_post_request(url, auth=None, data=None):
         """Make and handle a ``POST`` request to the given url."""
-        response = requests.post(url, auth=auth, headers=headers, json=data)
+        response = requests.post(url, auth=auth, json=data)
 
         if response.ok:
             return json.loads(response.text)
         else:
             raise RuntimeWarning("{} response ".format(response.status_code) +
-                                 "from {}".format(url))
+                                 "from {}: {}".format(url, response.text))
 
     @staticmethod
     def make_put_request(url, auth=None, headers=None, data=None):
@@ -44,7 +45,7 @@ class Utility(object):
             return json.loads(response.text)
         else:
             raise RuntimeWarning("{} response ".format(response.status_code) +
-                                 "from {}".format(url))
+                                 "from {}: {}".format(url, response.text))
 
     @staticmethod
     def make_delete_request(url, auth=None, headers=None):
@@ -55,4 +56,4 @@ class Utility(object):
             return json.loads(response.text)
         else:
             raise RuntimeWarning("{} response ".format(response.status_code) +
-                                 "from {}".format(url))
+                                 "from {}: {}".format(url, response.text))
