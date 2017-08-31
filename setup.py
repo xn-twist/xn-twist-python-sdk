@@ -23,7 +23,7 @@ test_requirements = [
 
 setup(
     name='xntwist_python_sdk',
-    version='1.2.3',
+    version='1.2.4',
     description="Python SDK for XN-Twist's API",
     long_description=readme + '\n\n' + history,
     author="Floyd Hightower",
