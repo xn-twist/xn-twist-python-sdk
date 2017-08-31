@@ -2,14 +2,12 @@
 # -*- coding: utf-8 -*-
 """Python SDK for XN-Twist's API."""
 
-import argparse
 try:
     import ConfigParser
 except:
     import configparser as ConfigParser
-import json
+import sys
 
-import requests
 from requests.auth import HTTPBasicAuth
 
 from .utility import Requester
@@ -74,7 +72,8 @@ class XnTwistSDK(object):
         """
         Make ``GET`` request to branch with admin users (``/administrators``).
         """
-        return self.requester.make_get_request(self.api_path + "administrators")
+        return self.requester.make_get_request(self.api_path +
+                                               "administrators")
 
     def get_feed(self):
         """
@@ -94,7 +93,8 @@ class XnTwistSDK(object):
         Make ``GET`` request to branch with the list of non-basic characters
         that may be used to spoof latin characters (``/non_basic_characters``).
         """
-        return self.requester.make_get_request(self.api_path + "non_basic_characters")
+        return self.requester.make_get_request(self.api_path +
+                                               "non_basic_characters")
 
     def get_unmapped_chars(self):
         """
@@ -102,28 +102,32 @@ class XnTwistSDK(object):
         have not been mapped to any basic characters
         (``/unmapped_characters``).
         """
-        return self.requester.make_get_request(self.api_path + "unmapped_characters")
+        return self.requester.make_get_request(self.api_path +
+                                               "unmapped_characters")
 
     def get_basic_chars(self):
         """
         Make ``GET`` request to branch with basic characters
         (``/basic_characters``).
         """
-        return self.requester.make_get_request(self.api_path + "basic_characters")
+        return self.requester.make_get_request(self.api_path +
+                                               "basic_characters")
 
     def get_suggested_deprecations(self):
         """
         Make ``GET`` request to branch with non-basic characters that have
         been suggested for deprecation (``/suggested_deprecations``).
         """
-        return self.requester.make_get_request(self.api_path + "suggested_deprecations")
+        return self.requester.make_get_request(self.api_path +
+                                               "suggested_deprecations")
 
     def get_depricated_chars(self):
         """
         Make ``GET`` request to branch with the non-basic characters that have
         been deprecated (``/depricated_characters``).
         """
-        return self.requester.make_get_request(self.api_path + "depricated_characters")
+        return self.requester.make_get_request(self.api_path +
+                                               "depricated_characters")
 
     def add_new_mapping(self, data):
         """
