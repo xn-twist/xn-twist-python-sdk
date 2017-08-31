@@ -150,7 +150,7 @@ class XnTwistSDK(object):
 
     def delete_feed_item(self, item_json):
         """
-        Make ``POST`` request to mappings branch (``/mappings``).
+        Make ``DELETE`` request to feed branch (``/feed``).
         """
         # find the id and etag
         item_id = item_json['_id']
@@ -160,6 +160,6 @@ class XnTwistSDK(object):
             'If-Match': item_etag
         }
 
-        return self.requester.make_delete_request(self.api_path + "mappings" +
+        return self.requester.make_delete_request(self.api_path + "feed" +
                                                   "/{}".format(item_id),
                                                   self.auth, header)
