@@ -130,7 +130,7 @@ class XnTwistSDK(object):
         Make ``POST`` request to mappings branch (``/mappings``).
         """
         return self.requester.make_post_request(self.api_path + "mappings",
-                                              self.auth, data)
+                                                self.auth, data)
 
     def update_existing_mapping(self, item_json, new_data):
         """
@@ -145,8 +145,8 @@ class XnTwistSDK(object):
         }
 
         return self.requester.make_put_request(self.api_path + "mappings" +
-                                                  "/{}".format(item_id),
-                                                  self.auth, header, data)
+                                               "/{}".format(item_id),
+                                               self.auth, header, new_data)
 
     def delete_feed_item(self, item_json):
         """
