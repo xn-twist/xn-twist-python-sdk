@@ -53,7 +53,7 @@ class Requester(object):
         response = requests.delete(url, auth=auth, headers=headers)
 
         if response.ok:
-            return json.loads(response.text)
+            return
         else:
             raise RuntimeWarning("{} response ".format(response.status_code) +
                                  "from {}: {}".format(url, response.text))
