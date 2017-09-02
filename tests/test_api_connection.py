@@ -17,7 +17,7 @@ def xn():
 
 def test_get_requests(xn):
     """Test GET requests to XN-Twist's API."""
-    base_response = xn.get_base()
+    base_response = xn.get_branch()
     # make assertions to ensure that the base_response was received and all branches are listed
     assert("administrators" in json.dumps(base_response))
     assert("mappings" in json.dumps(base_response))
@@ -30,31 +30,31 @@ def test_get_requests(xn):
 
     response = None
     try:
-        response = xn.get_administrators()
+        response = xn.get_branch('administrators')
     except RuntimeWarning:
         assert("null" in json.dumps(response))
     else:
         raise RuntimeError("Able to reach admin branch w/o authentication!")
 
-    response = xn.get_feed()
+    response = xn.get_branch('feed')
     assert('"title": "feed"' in json.dumps(response))
 
-    response = xn.get_mappings()
+    response = xn.get_branch('mappings')
     assert('"title": "mappings"' in json.dumps(response))
 
-    response = xn.get_non_basic_chars()
+    response = xn.get_branch('non_basic_characters')
     assert('"title": "non_basic_characters"' in json.dumps(response))
 
-    response = xn.get_unmapped_chars()
+    response = xn.get_branch('unmapped_characters')
     assert('"title": "unmapped_characters"' in json.dumps(response))
 
-    response = xn.get_basic_chars()
+    response = xn.get_branch('basic_characters')
     assert('"title": "basic_characters"' in json.dumps(response))
 
-    response = xn.get_suggested_deprecations()
+    response = xn.get_branch('suggested_deprecations')
     assert('"title": "suggested_deprecations"' in json.dumps(response))
 
-    response = xn.get_depricated_chars()
+    response = xn.get_branch('depricated_characters')
     assert('"title": "depricated_characters"' in json.dumps(response))
 
 
