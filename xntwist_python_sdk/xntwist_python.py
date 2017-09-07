@@ -71,16 +71,16 @@ class XnTwistSDK(object):
         else:
             return self.requester.make_get_request(self.api_path + api_branch)
 
-    def add_new_mapping(self, data):
+    def add_item(self, data, api_branch):
         """
-        Make ``POST`` request to mappings branch (``/mappings``).
+        Make ``POST`` request to add an item to the given branch.
         """
-        return self.requester.make_post_request(self.api_path + "mappings",
+        return self.requester.make_post_request(self.api_path + api_branch,
                                                 self.auth, data)
 
-    def update_existing_mapping(self, item_json, new_data):
+    def update_item(self, item_json, new_data, api_branch):
         """
-        Make ``PUT`` request to mappings branch (``/mappings``) to modify an existing mapping.
+        Make ``PUT`` request to update an item on the given branch.
         """
         # find the id and etag
         item_id = item_json['_id']
@@ -90,7 +90,7 @@ class XnTwistSDK(object):
             'If-Match': item_etag
         }
 
-        return self.requester.make_put_request(self.api_path + "mappings" +
+        return self.requester.make_put_request(self.api_path + api_branch +
                                                "/{}".format(item_id),
                                                self.auth, header, new_data)
 
