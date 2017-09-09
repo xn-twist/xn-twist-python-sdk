@@ -26,7 +26,8 @@ def test_get_requests(xn):
     assert("non_basic_characters" in json.dumps(base_response))
     assert("suggested_deprecations" in json.dumps(base_response))
     assert("unmapped_characters" in json.dumps(base_response))
-    assert("depricated_characters" in json.dumps(base_response))
+    assert("deprecated_characters" in json.dumps(base_response))
+    assert("high_scores" in json.dumps(base_response))
 
     response = None
     try:
@@ -54,8 +55,11 @@ def test_get_requests(xn):
     response = xn.get_branch('suggested_deprecations')
     assert('"title": "suggested_deprecations"' in json.dumps(response))
 
-    response = xn.get_branch('depricated_characters')
-    assert('"title": "depricated_characters"' in json.dumps(response))
+    response = xn.get_branch('deprecated_characters')
+    assert('"title": "deprecated_characters"' in json.dumps(response))
+
+    response = xn.get_branch('high_scores')
+    assert('"title": "high_scores"' in json.dumps(response))
 
 
 def test_mappings_format(xn):
