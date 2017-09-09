@@ -2,7 +2,7 @@
 deploy:
   true:
     condition: $TOXENV == py27
-    repo: xn-twist/xntwist-python-sdk
+    repo: xn-twist/xn-twist-python-sdk
     tags: true
   distributions: sdist bdist_wheel
   password:

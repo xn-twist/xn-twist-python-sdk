@@ -85,17 +85,17 @@ qthelp:
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/xntwist_python_sdk.qhcp"
+	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/xn_twist_python_sdk.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/xntwist_python_sdk.qhc"
+	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/xn_twist_python_sdk.qhc"
 
 devhelp:
 	$(SPHINXBUILD) -b devhelp $(ALLSPHINXOPTS) $(BUILDDIR)/devhelp
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/xntwist_python_sdk"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/xntwist_python_sdk"
+	@echo "# mkdir -p $$HOME/.local/share/devhelp/xn_twist_python_sdk"
+	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/xn_twist_python_sdk"
 	@echo "# devhelp"
 
 epub:

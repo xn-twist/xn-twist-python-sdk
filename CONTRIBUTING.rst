@@ -15,7 +15,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/xn-twist/xntwist-python-sdk/issues.
+Report bugs at https://github.com/xn-twist/xn-twist-python-sdk/issues.
 
 If you are reporting a bug, please include:
 
@@ -45,7 +45,7 @@ articles, and such.
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at https://github.com/xn-twist/xntwist-python-sdk/issues.
+The best way to send feedback is to file an issue at https://github.com/xn-twist/xn-twist-python-sdk/issues.
 
 If you are proposing a feature:
 
@@ -57,17 +57,17 @@ If you are proposing a feature:
 Get Started!
 ------------
 
-Ready to contribute? Here's how to set up `xntwist-python-sdk` for local development.
+Ready to contribute? Here's how to set up `xn-twist-python-sdk` for local development.
 
-1. Fork the `xntwist-python-sdk` repo on GitHub.
+1. Fork the `xn-twist-python-sdk` repo on GitHub.
 2. Clone your fork locally::
 
-    $ git clone git@github.com:<your_github_username_here>/xntwist-python-sdk.git
+    $ git clone git@github.com:<your_github_username_here>/xn-twist-python-sdk.git
 
 3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
 
-    $ mkvirtualenv xntwist-python-sdk
-    $ cd xntwist-python-sdk/
+    $ mkvirtualenv xn-twist-python-sdk
+    $ cd xn-twist-python-sdk/
     $ python setup.py develop
 
 4. Create a branch for local development::
@@ -78,7 +78,7 @@ Ready to contribute? Here's how to set up `xntwist-python-sdk` for local develop
 
 5. When you're done making changes, check that your changes pass flake8 and the tests, including testing other Python versions with tox::
 
-    $ flake8 xntwist-python-sdk tests
+    $ flake8 xn-twist-python-sdk tests
     $ python setup.py test or py.test
     $ tox
 
@@ -102,7 +102,7 @@ Before you submit a pull request, check that it meets these guidelines:
    your new functionality into a function with a docstring, and add the
    feature to the list in README.rst.
 3. The pull request should work for Python 2.6, 2.7, 3.3, 3.4 and 3.5, and for PyPy. Check
-   https://travis-ci.org/xn-twist/xntwist-python-sdk/pull_requests
+   https://travis-ci.org/xn-twist/xn-twist-python-sdk/pull_requests
    and make sure that the tests pass for all supported Python versions.
 
 Tips
@@ -110,5 +110,5 @@ Tips
 
 To run a subset of tests::
 
-$ py.test tests.test_xntwist-python-sdk
+$ py.test tests.test_xn-twist-python-sdk
 
