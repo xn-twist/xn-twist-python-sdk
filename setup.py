@@ -22,21 +22,21 @@ test_requirements = [
 ]
 
 setup(
-    name='xntwist_python_sdk',
+    name='xn-twist-python-sdk',
     version='2.1.0',
     description="Python SDK for XN-Twist's API",
     long_description=readme + '\n\n' + history,
     author="Floyd Hightower",
     author_email='',
-    url='https://github.com/xn-twist/xntwist-python-sdk',
+    url='https://github.com/xn-twist/xn-twist-python-sdk',
     packages=find_packages(exclude=('tests', 'docs')),
-    package_dir={'xntwist_python_sdk':
-                 'xntwist_python_sdk'},
+    package_dir={'xn_twist_python_sdk':
+                 'xn_twist_python_sdk'},
     include_package_data=True,
     install_requires=requirements,
     license=license,
     zip_safe=True,
-    keywords='xntwist_python_sdk',
+    keywords='xn_twist_python_sdk',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',

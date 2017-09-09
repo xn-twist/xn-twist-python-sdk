@@ -4,7 +4,7 @@
 
 import os
 
-from xntwist_python_sdk import xntwist_python
+from xn_twist_python_sdk import xn_twist_python
 
 
 def test_config_file_reading():
@@ -12,7 +12,7 @@ def test_config_file_reading():
     config_file_path = os.path.abspath(os.path.join(os.path.dirname(__file__),
                                                     './xn.conf.test'))
     # initialize the SDK with a conf file
-    xn = xntwist_python.XnTwistSDK(config_file_path)
+    xn = xn_twist_python.XnTwistSDK(config_file_path)
 
     # make sure the config file was properly read
     assert xn.auth.username == "John Doe"
