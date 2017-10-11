@@ -2,4 +2,4 @@
 """XN-Twist Python SDK to help find unicode domain squats."""
 
 __author__ = """Floyd Hightower"""
-__version__ = '3.0.1'
+__version__ = '4.0.0'
