@@ -43,24 +43,23 @@ class XnTwistSDK(object):
             username, password = _read_config_file(config_file_path)
             self.auth = HTTPBasicAuth(username, password)
 
-    def retrieve_dataset(self):
+    def retrieve_dataset(self, limit=10):
         """Pull data from the ``/mappings`` branch and format it for use with
-        the xn-twist algorithm."""
-        dataset = {}
+        the xn-twist algorithm. The limit sets the maximum number of spoofs that should be returned for each character. A limit of zero will return all of the spoofs."""
+        dataset = dict()
 
         # make a request to the ``mappings`` branch
         r = self.get_branch('mappings')
 
         # iterate through each of the mappings
         for mapping in r['_items']:
-            # if the character is not in the dataset, create a new entry
-            if mapping['character'] not in dataset.keys():
-                dataset[mapping['character']] = list()
-
-            # add each potential spoof of the current character to the dataset
-            for potential_spoof in mapping['potential_spoofs']:
-                dataset[mapping['character']].append(
-                    potential_spoof['spoof_character'])
+            if limit == 0:
+                # create a list of the spoofs sorted by votes
+                sorted_list = sorted(mapping['potential_spoofs'], key=lambda spoof: spoof['votes'], reverse=True)
+            else:
+                # create a list of the spoofs sorted by votes
+                sorted_list = sorted(mapping['potential_spoofs'], key=lambda spoof: spoof['votes'], reverse=True)[:limit]
+            dataset[mapping['character']] = [spoof_character['spoof_character'] for spoof_character in sorted_list]
 
         return dataset
 
