@@ -33,7 +33,7 @@ class XnTwistSDK(object):
 
     def __init__(self, config_file_path=None):
         """."""
-        self.api_path = "https://xntwist.tk:2053/"
+        self.api_path = "https://xntwist.hightower.space:2053/"
         # initialize a Requester object
         self.requester = Requester()
         # set the path to the config file (if any)
